@@ -25,7 +25,7 @@ btnHold.addEventListener("click", () => {
     score = 0;
     document.querySelector(`#current--${player}`).innerHTML = score;
     document.querySelector(`#score--${player}`).innerHTML = mainScore;
-    if (mainScore > 10) {
+    if (mainScore > 50) {
       playing = false;
       info.innerHTML = `Player ${player} is the winner`;
       createConfetti();
@@ -41,7 +41,7 @@ function play(plr) {
   if (img.classList.contains("hidden")) {
     img.classList.remove("hidden");
   }
-  img.setAttribute("src", `dice-${random}.png`);
+  img.setAttribute("src", `Assets/dice-${random}.png`);
   if (random == 1) {
     document.querySelector(`#current--${plr}`).innerHTML = 0;
     switchPlayer(plr);
